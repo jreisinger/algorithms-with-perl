@@ -1,0 +1,23 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+use Test::More tests => 3;
+
+my $words = [qw(a b c)];
+
+ok binary_search( 'a', $words, 0 );
+ok binary_search( 'b', $words, 1 );
+ok binary_search( 'c', $words, 2 );
+
+sub binary_search {
+    my ( $find, $words ) = @_;
+    my ( $low, $high ) = ( 0, @$words - 1 );
+
+    while ( $low <= $high ) {
+        my $try = int( ( $low + $high ) / 2 );
+        $low = $try + 1, next if $words->[$try] lt $find;
+        $high = $try - 1, next if $words->[$try] gt $find;
+        return $try;
+    }
+    return;
+}
