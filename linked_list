@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+my $link = undef;
+for my $value ( reverse qw(a b c) ) {
+    $link = [ $link, $value ]
+}
+
+print $link->[0][0][1], "\n";  # print "c"
