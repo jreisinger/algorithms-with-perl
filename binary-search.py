@@ -16,7 +16,7 @@ def binary_search(list, item):
         i = i + 1
         time.sleep(2)
 
-        if guess == item:   # the guest is correct
+        if guess == item:   # the guess is correct
             return mid
         if guess < item:    # the guess was too low
             low = mid + 1
