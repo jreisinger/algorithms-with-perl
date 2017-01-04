@@ -18,9 +18,9 @@ def binary_search(list, item):
 
         if guess == item:   # the guess is correct
             return mid
-        if guess < item:    # the guess was too low
+        if guess < item:    # the guess is too low
             low = mid + 1
-        else:               # the guess was too high
+        else:               # the guess is too high
             high = mid - 1
 
     # the item is not in the list
