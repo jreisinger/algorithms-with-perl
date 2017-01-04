@@ -16,15 +16,12 @@ def binary_search(list, item):
         i = i + 1
         time.sleep(2)
 
-        if guess == item:
+        if guess == item:   # the guest is correct
             return mid
-        elif guess < item:  # the guess was too low
+        if guess < item:    # the guess was too low
             low = mid + 1
-        elif guess > item:  # the guess was too high
+        else guess > item:  # the guess was too high
             high = mid - 1
-        else:               # we should never get here
-            print "something's wrong"
-            exit(1)
 
     # the item is not in the list
     return None
