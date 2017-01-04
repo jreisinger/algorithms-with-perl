@@ -7,7 +7,7 @@ def binary_search(list, item):
     high = len(list) - 1
 
     i = 1
-    while low <= high:      # don't forget =, < alone does not work
+    while low <= high:      # don't forget =, < alone does not work - try list = range(1, 6)
         mid = (high + low) / 2
         guess = list[mid]   # don't forget this indirection!
 
