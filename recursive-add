@@ -1,0 +1,10 @@
+#!/usr/bin/perl
+use strict;
+use warnings;
+
+# Add elements of a list using a recursive function instead of a loop.
+sub radd {
+    return( defined $_[0] ? $_[0] + radd(@_[1..$#_]) : 0 );
+}
+
+print radd(1..10), "\n";
