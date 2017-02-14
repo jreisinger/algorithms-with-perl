@@ -3,7 +3,7 @@ def qsort(a):
     if len(a) < 2:
         return a
     else:
-        pivot = a[0]
+        pivot = a[0] # should be random not the 1st element
         less = [ i for i in a[1:] if i <= pivot ]
         more = [ i for i in a[1:] if i >  pivot ]
 
