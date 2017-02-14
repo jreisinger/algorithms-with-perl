@@ -1,4 +1,5 @@
 def qsort(a):
+    """Quicksort altgorithm - however this is not the best way because pivot is not random"""
     if len(a) < 2:
         return a
     else:
