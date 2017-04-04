@@ -1,6 +1,6 @@
 # Mastering Algorithms with Perl
 
-Algorithms implemented in Perl. Or Python. Or C :-).
+Algorithms implemented in Perl. Or in Python. Or in C :-).
 
 Books:
 
