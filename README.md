@@ -1,8 +1,9 @@
 # Mastering Algorithms with Perl
 
-Algorithms implemented in Perl. Or Python :-).
+Algorithms implemented in Perl. Or Python. Or C :-).
 
 Books:
 
-* Grokking Algorithms
 * Mastering Algorithms with Perl
+* Grokking Algorithms
+* Programming in C
