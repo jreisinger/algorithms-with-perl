@@ -1,0 +1,21 @@
+#!/usr/bin/env perl
+use 5.014;      # includes strict
+use warnings;
+
+use Data::Dumper;
+
+my %h = ( one => 1, two => 2, due => 2, three => 3 );
+
+sub invert_hash {
+    my %h =  @_;
+
+    my %inverted;
+    while ( my($k, $v) = each %h ) {
+        push @{$inverted{$v}}, $k;
+    }
+
+    return %inverted;
+}
+
+my %hi = invert_hash(%h);
+print Dumper \%hi;
