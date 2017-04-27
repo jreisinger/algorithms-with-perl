@@ -7,3 +7,4 @@ Books:
 * Mastering Algorithms with Perl
 * Grokking Algorithms
 * Programming in C
+* Think Python
