@@ -1,7 +1,7 @@
 import time
 
 def binary_search(list, item):
-    """Return the index of the item in a sorted list. This is a O(log n) algorithm."""
+    """Return the index of the item in a SORTED list. This is a O(log n) algorithm."""
 
     low = 0
     high = len(list) - 1
