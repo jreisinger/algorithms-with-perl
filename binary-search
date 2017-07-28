@@ -17,7 +17,7 @@ is binary_search( 'd', $words ), undef, 'Word not in the list';
 
 done_testing;
 
-# Return the index of a string in a sorted list of strings
+# Return the index of a string in a SORTED list of strings
 sub binary_search {
     my ( $find, $words ) = @_;
     my ( $low, $high ) = ( 0, @$words - 1 );
