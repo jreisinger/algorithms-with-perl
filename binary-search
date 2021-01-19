@@ -22,7 +22,7 @@ sub binary_search {
 
     while ( $low <= $high ) {                   # while the window is open
         my $try = int( ( $low + $high ) / 2 );  # try the middle element
-        $low = $try + 1, next if $words->[$try] lt $find;    # raise bottom
+        $low  = $try + 1, next if $words->[$try] lt $find;   # raise bottom
         $high = $try - 1, next if $words->[$try] gt $find;   # lower top
         return $try;    # we've found the word!
     }
