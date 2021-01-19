@@ -8,12 +8,10 @@ my $words = [qw(a b c)];
 is binary_search( 'a', $words ), 0, 'Word is first element';
 is binary_search( 'b', $words ), 1, 'Word is middle element';
 is binary_search( 'c', $words ), 2, 'Word is last element';
+is binary_search( 'd', $words ), undef, 'Word not in the list';
 
 $words = [];
 is binary_search( 'a', $words ), undef, 'No list to search';
-
-$words = [qw(a b c)];
-is binary_search( 'd', $words ), undef, 'Word not in the list';
 
 done_testing;
 
@@ -22,8 +20,8 @@ sub binary_search {
     my ( $find, $words ) = @_;
     my ( $low, $high ) = ( 0, @$words - 1 );
 
-    while ( $low <= $high ) {    # while the window is open
-        my $try = int( ( $low + $high ) / 2 );    # try the middle element
+    while ( $low <= $high ) {                   # while the window is open
+        my $try = int( ( $low + $high ) / 2 );  # try the middle element
         $low = $try + 1, next if $words->[$try] lt $find;    # raise bottom
         $high = $try - 1, next if $words->[$try] gt $find;   # lower top
         return $try;    # we've found the word!
